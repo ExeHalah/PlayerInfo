@@ -8,7 +8,7 @@ app = Flask(__name__)
 # ✅ API key validation
 def validate_key():
     api_key = request.args.get('key')
-    if api_key != 'ADITYA':
+    if api_key != 'KING':
         return jsonify({"error": "Invalid API key"}), 403
     return None
 
@@ -62,7 +62,7 @@ def format_equipped_skills(equipped_skills):
     return ', '.join(formatted_skills) if formatted_skills else 'Not Found', skill_images
 
 # ✅ Main API route
-@app.route('/ADITYA-PLAYER-INFO')
+@app.route('/KING07-PLAYER-INFO')
 def fetch_info():
     # Validate API key
     key_validation = validate_key()
